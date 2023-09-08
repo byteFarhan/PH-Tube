@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHero Tube</title>
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="./images/fav-icon.svg" type="image/x-icon">
+    <!-- Google Font  Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: "'Inter', sans-serif"
+                    },
+                    colors: {
+                        primary: '#FF1F3D',
+                        title: '#171717',
+                        heading: '#252525',
+                        'unice': 'rgba(23, 23, 23, 0.70)',
+                        btn: 'rgba(37, 37, 37, 0.15)',
+                        //     'dark-2': 'rgba(18, 18, 18, 0.80)'
+                    }
+                },
+                // container: {
+                //     center: true,
+                //     padding: {
+                //         DEFAULT: '1.5rem',
+                //         md: '1rem',
+                //         lg: '4rem',
+                //         xl: '5rem',
+                //         '2xl': '6rem'
+                //     }
+                // }
+            }
+        }
+    </script>
+    <style>
+        h1,
+        h2,
+        h3,
+        p {
+            color: #171717;
+        }
+    </style>
+</head>
+
+<body class="px-5 my-5 font-inter md:px-10 lg:px16 lg:my-8">
+    <header>
+        <nav class="flex flex-col items-center justify-between gap-4 md:gap-0 md:flex-row">
+            <div class="order-1">
+                <img src="./images/Logo.png" alt="">
+            </div>
+            <button onclick="doSort()" class="order-3 btn bg-btn text-heading md:order-2">Sort by view</button>
+            <button onclick="goBlog()" id="btn-blog"
+                class="order-2 text-white btn bg-primary hover:bg-primary md:order-3">Blog</button>
+        </nav>
+        <hr class="mx-auto mt-5 border-unice md:mt-8">
+    </header>
+    <main>
+        <!-- catagory select section -->
+        <section>
+            <div id="btn-container" class="flex justify-center gap-3 my-8 md:gap-6 md:flex-row ">
+            </div>
+        </section>
+        <!-- emtpy-card-container section -->
+        <section>
+            <div id="emtpy-card-container" class="">
+
+            </div>
+        </section>
+        <!-- video card display section -->
+        <section>
+            <div id="card-container" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            </div>
+        </section>
+    </main>
+    <footer class="">
+
+
+
+    </footer>
+    <!-- js linkup -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
+<!-- <p id="uplodeTime" class=""absolute bottom-0 right-0 text-white rounded bg-title px-2">${postedDateHour} hour ago</p> -->
+<!-- <p id="uplodeTime" class="absolute bottom-0 right-0 px-2 py-1 text-white rounded bg-title">hello world!</p> -->
